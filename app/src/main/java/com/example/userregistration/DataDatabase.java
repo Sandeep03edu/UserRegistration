@@ -16,13 +16,14 @@ public abstract class DataDatabase extends RoomDatabase {
     public static synchronized DataDatabase getInstance(Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
-                    DataDatabase.class, "Data_database")
+                    DataDatabase.class, "data_database")
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)
                     .build();
         }
         return instance;
     }
+
     private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -33,10 +34,10 @@ public abstract class DataDatabase extends RoomDatabase {
 
     private static class PopulateDbAsyncTask{
 
-        private DataDao DataDao;
+        private DataDao dataDao;
 
         public PopulateDbAsyncTask(DataDatabase db) {
-            DataDao = db.DataDao();
+            dataDao = db.DataDao();
         }
 
         public void BackgroundTask() {

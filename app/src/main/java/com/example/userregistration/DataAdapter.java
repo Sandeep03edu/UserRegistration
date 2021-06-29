@@ -70,7 +70,7 @@ public class DataAdapter extends ListAdapter<Data, DataAdapter.DataHolder> {
 
 
     public interface OnItemClickListener {
-        void onItemClick(Data Data);
+        void onItemClick(Data data);
     }
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;

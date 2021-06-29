@@ -67,8 +67,6 @@ public class DataRepository {
                 @Override
                 public void run() {
                     doInBackground();
-                    // We don't need to perform postExecute task
-//                    activity.runOnUiThread(() -> onPostExecute());
                 }
             }).start();
         }

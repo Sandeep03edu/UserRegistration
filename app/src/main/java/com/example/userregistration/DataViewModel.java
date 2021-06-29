@@ -18,14 +18,14 @@ public class DataViewModel extends AndroidViewModel {
         allDatas = repository.getAllDatas();
     }
 
-    public void insert(Data Data){
-        repository.insert(Data);
+    public void insert(Data data){
+        repository.insert(data);
     }
-    public void update(Data Data){
-        repository.update(Data);
+    public void update(Data data){
+        repository.update(data);
     }
-    public void delete(Data Data){
-        repository.delete(Data);
+    public void delete(Data data){
+        repository.delete(data);
     }
     public void deleteAllDatas(){
         repository.deleteAllNodes();
